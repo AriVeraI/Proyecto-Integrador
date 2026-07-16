@@ -1,5 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.main-header {
+    background: #C66271;
+}
+
+.link-per {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
 }

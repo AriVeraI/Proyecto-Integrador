@@ -96,3 +96,70 @@
   color: #333333;
 }
 /*=======================NUESTRO PROPOSITO -> MISION Y VISION============*/
+
+/*======================= Valores =======================================*/
+
+h3, h4, h5, h6, .valores-titulo, .valor-card-title {
+  font-family: 'Fredoka', sans-serif;
+}
+
+body, p, .valores-subtitulo, .valor-card-text {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.valores-titulo {
+  font-weight: 500; 
+  color: #000000;
+  font-size: 27px;
+  margin-bottom: 2px;
+}
+
+.valores-subtitulo {
+  color: #6c757d;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Tarjeta contenedora */
+.valor-card {
+  background-color: #e0e0e0 !important;
+  border: none !important;
+  border-radius: 16px !important;
+  padding: 2.5rem 1.5rem;
+}
+
+/* Círculo con el número */
+.valor-numero {
+  /* Al ser un número, puedes decidir si dejarlo con Fredoka o Montserrat. 
+     Por defecto heredará Montserrat por ser un div, si lo quieres con Fredoka añade: 
+     font-family: 'Fredoka', sans-serif; */
+  width: 60px;
+  height: 60px;
+  background-color: #c46d76; 
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 4px 10px rgba(196, 109, 118, 0.35);
+}
+
+/* Textos internos de la tarjeta */
+.valor-card-title {
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.valor-card-text {
+  color: #5a5a5a;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400; /* Montserrat en peso regular se lee excelente */
+}

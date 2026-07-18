@@ -1,3 +1,22 @@
+:root {
+    /* Colores oficiales */
+    --color-primario: #C66271;    /* Rosa suave / Malva de la barra de navegación */
+    --color-fondo: #F2F4F6;       /* Gris/blanco muy claro de fondo */
+    --color-footer: #D9D9D9;      /* Gris suave para el footer */
+    --color-blanco: #FFFFFF;      /* Letras en contraste claro */
+    --color-negro: #000000;       /* Letras en contraste oscuro */
+
+    /* Fuentes oficiales */
+    --fuente-titulos: 'Fredoka', sans-serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+}
+
+body{
+  background-color: var(--color-fondo);
+  height: 100vh;
+}
+
+
 /* SECCIÓN DE ESTILO DE DESCRIPCION */
 
 #descripcion {
@@ -28,8 +47,9 @@
 
 
 /*TERMINA SECCIÓN DE ESTILO DE DESCRIPCION */ 
+/*=======================CABECERA============*/
 .main-header {
-    background: #C66271;
+    background: var(--color-primario);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,9 +57,9 @@
 }
 
 .title-shop-header {
-    font-family: "Fredoka", sans-serif;
+    font-family: var(--fuente-titulos);
     font-size: 20px;
-    color: white;
+    color: var(--color-blanco);
 }
 
 .links-nav {
@@ -52,27 +72,121 @@
 }
 
 .principal-link-header {
-    color: white;
+    color: var(--color-blanco);
     text-decoration: none;
 }
 
 .principal-link-header:hover {
     text-decoration: underline;
-    color: gainsboro;
+    color: var(--color-fondo);
 }
 
 .icons-header img, a{
     margin-left: 10px;
     cursor: pointer;
 }
+
+/*======================INTRO NOSOSTROS============*/
+
+section > section:first-of-type {
+    position: relative;
+    width: 100%;
+    height: 450px;               
+    overflow: hidden;
+    margin: 0;
+    padding: 0;                  
+}
+
+.about-imagen {
+    width: 100%;
+    height: 100%;
+}
+
+.about-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;       
+    display: block;              
+    filter: brightness(75%); 
+}
+
+.about-titulo-imagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.about-titulo {
+    font-family: var(--fuente-titulos);
+    color: var(--color-blanco);
+    font-size: 3.5rem;           
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); 
+}
+
+.about-seccion {
+    background-color: var(--color-fondo); 
+    margin: 0;                            
+    padding: 80px 20px;                   
+    display: flex;
+    justify-content: center;
+}
+
+.contendor-about-descripcion {
+    max-width: 860px;                     
+    width: 100%;
+    text-align: center;                   
+    position: relative;
+}
+
+.about-subtitulo {
+    font-family: var(--fuente-titulos);
+    color: var(--color-negro);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+.About-parrafo1, 
+.About-parrafo2 {
+    font-family: var(--fuente-cuerpo);
+    color: var(--color-negro);
+    font-size: 1.0rem;
+    line-height: 1.5;                     
+    margin-bottom: 20px;
+}
+
+.About-parrafo2 {
+    margin-bottom: 0;                     
+}
+
+.contendor-about-descripcion::before,
+.contendor-about-descripcion::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: var(--color-primario);
+    margin: 0 auto;
+}
+
+
 /*=======================NUESTRO PROPOSITO -> MISION Y VISION============*/
 #seccion-proposito {
-  background-color: #f2f4f6;
+  background-color: var(--color-fondo);
   padding: 40px 20px;
 }
 #seccion-proposito h2 {
   text-align: center;
-  font-family: "Fredoka", sans-serif;
+  font-family: var(--fuente-titulos);
 }
 .contenedor-tarjetas {
   display: flex;
@@ -83,7 +197,7 @@
 }
 
 .mision-vision {
-  background-color: #ffffff; /* Fondo blanco para que resalte sobre el Platinum */
+  background-color: var(--color-blanco); /* Fondo blanco para que resalte sobre el Platinum */
   border-radius: 12px; /* Les da los bordes redondeados del diseño de Figma */
   padding: 25px; /* Margen interno para que el texto respire y no toque las orillas */
   flex: 1; /* Hace que ambas tarjetas midan exactamente lo mismo de ancho */
@@ -98,31 +212,31 @@
 }
 
 .mision-vision h3 {
-  font-family: "Fredoka", sans-serif;
-  color: #c66271;
+  font-family: var(--fuente-titulos);
+  color: var(--color-primario);
   text-align: center;
   font-weight: bold;
 }
 .mision-vision p {
-  font-family: Montserrat;
+  font-family: var(--fuente-cuerpo);
   text-align: justify;
-  color: #333333;
+  color: var(--color-negro);
 }
 /*=======================NUESTRO PROPOSITO -> MISION Y VISION============*/
 
 /*======================= Valores =======================================*/
 
 h3, h4, h5, h6, .valores-titulo, .valor-card-title {
-  font-family: 'Fredoka', sans-serif;
+  font-family: var(--fuente-titulos);
 }
 
 body, p, .valores-subtitulo, .valor-card-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--fuente-cuerpo);
 }
 
 .valores-titulo {
   font-weight: 500; 
-  color: #000000;
+  color: var(--color-negro);
   font-size: 27px;
   margin-bottom: 2px;
 }
@@ -135,7 +249,7 @@ body, p, .valores-subtitulo, .valor-card-text {
 
 /* Tarjeta contenedora */
 .valor-card {
-  background-color: #e0e0e0 !important;
+  background-color: var(--color-blanco) !important;
   border: none !important;
   border-radius: 16px !important;
   padding: 2.5rem 1.5rem;
@@ -148,8 +262,8 @@ body, p, .valores-subtitulo, .valor-card-text {
      font-family: 'Fredoka', sans-serif; */
   width: 60px;
   height: 60px;
-  background-color: #c46d76; 
-  color: #ffffff;
+  background-color: var(--color-primario); 
+  color: var(--color-blanco);
   font-weight: 700;
   font-size: 1.25rem;
   border-radius: 50%;
@@ -170,7 +284,7 @@ transform: scale(1.04) translateY(-5px);
 /* Textos internos de la tarjeta */
 .valor-card-title {
   font-weight: 600;
-  color: #000000;
+  color: var(--color-negro);
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
@@ -181,3 +295,4 @@ transform: scale(1.04) translateY(-5px);
   line-height: 1.6;
   font-weight: 400; /* Montserrat en peso regular se lee excelente */
 }
+

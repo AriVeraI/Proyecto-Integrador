@@ -20,6 +20,13 @@
     font-family: "Montserrat", sans-serif;
 }
 
+/*Animación recuadro descripción*/
+
+#descripHover:hover{
+  transform: scale(1.04) translateY(-5px);
+}
+
+
 /*TERMINA SECCIÓN DE ESTILO DE DESCRIPCION */ 
 .main-header {
     background: #C66271;
@@ -84,6 +91,12 @@
   max-width: 500px; /* Evita que las tarjetas se estiren demasiado en pantallas gigantes */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Una sombra muy sutil y elegante abajo */
 }
+
+/*Animacion cards*/
+.mision-vision:hover{
+  transform: scale(1.04) translateY(-5px);
+}
+
 .mision-vision h3 {
   font-family: "Fredoka", sans-serif;
   color: #c66271;
@@ -147,6 +160,11 @@ body, p, .valores-subtitulo, .valor-card-text {
   
   margin: 0 auto 1.5rem auto;
   box-shadow: 0 4px 10px rgba(196, 109, 118, 0.35);
+}
+
+/*Animacion de cards*/
+#animacard:hover{
+transform: scale(1.04) translateY(-5px);
 }
 
 /* Textos internos de la tarjeta */

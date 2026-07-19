@@ -16,6 +16,30 @@ body{
   height: 100vh;
 }
 
+
+/* SECCIÓN DE ESTILO DE DESCRIPCION */
+
+#descripcion {
+    background-color: #F2F4F6;
+}
+
+#div-descripcion{
+    /* background-color: #D9D9D9; */
+    background-color: #F2F4F6;
+}
+
+#h2-texto-descripcion{
+    color: #C66271;
+    font-family: "Fredoka", sans-serif;
+    text-align: center;
+    /* margin-top: 40px; */
+}
+
+#p-descripcion{
+    font-family: "Montserrat", sans-serif;
+}
+
+/*TERMINA SECCIÓN DE ESTILO DE DESCRIPCION */ 
 /*=======================CABECERA============*/
 .main-header {
     background: var(--color-primario);
@@ -253,3 +277,4 @@ body, p, .valores-subtitulo, .valor-card-text {
   line-height: 1.6;
   font-weight: 400; /* Montserrat en peso regular se lee excelente */
 }
+

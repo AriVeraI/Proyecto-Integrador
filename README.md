@@ -15,28 +15,28 @@ Descripción del Proyecto
 
 Proyecto desarrollado colaborativamente aplicando el marco de trabajo **SCRUM** con rotación periódica de roles:
 
-* **Ariadna Vera** — *Scrum Master*[cite: 2, 5]
-* **Iran Gutierrez** — *Product Owner*[cite: 2, 5]
-* **Cristian Rodriguez** — *Desarrollador*[cite: 2, 5]
-* **Ernesto Nava** — *Desarrollador Sr.*[cite: 2, 5]
-* **Brandon Cortez** — *Desarrollador*[cite: 2, 5]
-* **Israel Martínez** — *Desarrollador*[cite: 2, 5]
-* **Joyce Martinez** — *Desarrolladora*[cite: 2, 5]
-* **Santiago López** — *Desarrollador*[cite: 2, 5]
-* **Yazmin Silva** — *Desarrolladora*[cite: 2, 5]
+* **Ariadna Vera** — *Scrum Master*
+* **Iran Gutierrez** — *Product Owner*
+* **Cristian Rodriguez** — *Desarrollador*
+* **Ernesto Nava** — *Desarrollador Sr.*
+* **Brandon Cortez** — *Desarrollador*
+* **Israel Martínez** — *Desarrollador*
+* **Joyce Martinez** — *Desarrolladora*
+* **Santiago López** — *Desarrollador*
+* **Yazmin Silva** — *Desarrolladora*
 
 ---
 
 ## 🎨 Guía de Estilos UI
 
 * **Paleta de Colores:**
-  * Primario / Barra de Navegación: `#C66271` (Rosa Viejo)[cite: 4, 5]
-  * Fondo Principal: `#F2F4F6` (Platino)[cite: 4]
-  * Elementos Secundarios / Footer: `#D9D9D9` (Gris Alabastro)[cite: 4]
-  * Textos & Contrastes: `#000000` / `#FFFFFF`[cite: 4, 5]
+  * Primario / Barra de Navegación: `#C66271` (Rosa Viejo)
+  * Fondo Principal: `#F2F4F6` (Platino)
+  * Elementos Secundarios / Footer: `#D9D9D9` (Gris Alabastro)
+  * Textos & Contrastes: `#000000` / `#FFFFFF`
 * **Tipografías:**
-  * Encabezados & Títulos: **Fredoka**[cite: 4, 5]
-  * Texto de Cuerpo & Etiquetas: **Montserrat**[cite: 4, 5]
+  * Encabezados & Títulos: **Fredoka**
+  * Texto de Cuerpo & Etiquetas: **Montserrat**
 
 ---
 

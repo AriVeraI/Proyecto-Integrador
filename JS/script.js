@@ -26,11 +26,13 @@ const veriForm = (nameInput, emailInput, numberInput, message) => {
         alert('¡Gracias por contactarnos!\nEquipo Yeya\'s Little Shop');
     }
 }
-const enviarCorreo = (nameInput, emailInput, numberInput, message) => {
+//const enviarCorreo = (nameInput, emailInput, numberInput, message) => {
 // Todavía no nos enseñan
-}
+//}
 //Evento para llamar al formulario
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    mainForm();
-})
+
+
+// document.getElementById('contact-form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     mainForm();
+// })

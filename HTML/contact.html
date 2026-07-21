@@ -89,24 +89,25 @@
         <div class="col-md-8"> <!---- Card información del formulario---->
           <div class="card-body">
             <h3 class="card-title">Envíanos un mensaje</h3>
-            <form id="contact-form">
+            <form id="contact-form" action="https://formspree.io/f/xjgnojvj" method="POST">
               <div class="mb-3">
                 <label for="contactName" class="form-label contact-label About-parrafo2">Nombre</label>
-                <input type="text" class="form-control contact-input" id="contactName" placeholder="Tu nombre completo">
+                <input type="text" class="form-control contact-input" name="nombre" id="contactName" placeholder="Tu nombre completo">
               </div>
               <div class="mb-3">
                 <label for="contactEmail" class="form-label contact-label About-parrafo2">Correo Electrónico</label>
-                <input type="email" class="form-control contact-input" id="contactEmail" placeholder="hola@ejemplo.com">
+                <input type="email" class="form-control contact-input" name="correo" id="contactEmail" placeholder="hola@ejemplo.com">
               </div>
               <div class="mb-3">
                 <label for="contactSubject" class="form-label contact-label About-parrafo2">Teléfono</label>
-                <input type="text" class="form-control contact-input" id="contactNumber" placeholder="¿En qué podemos ayudarte?">
+                <input type="text" class="form-control contact-input" name="telefono" id="contactNumber" placeholder="¿En qué podemos ayudarte?">
               </div>
               <div class="mb-4">
                 <label for="contactMessage" class="form-label contact-label About-parrafo2">Mensaje</label>
-                <textarea class="form-control contact-input" id="contactMessage" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                <textarea class="form-control contact-input" name="mensaje" id="contactMessage" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
               </div>
-              <button type="submit" id="btnSend" class="btn text-white w-100 About-parrafo2">Enviar mensaje</button>
+              <button type="submit" class="btn btn-dark text-black"> Enviar mensaje</button>
+              <!-- <button type="submit" id="btnSend" class="btn text-white w-100 About-parrafo2">Enviar mensaje</button> -->
             </form>
           </div>
         </div>
@@ -163,7 +164,7 @@
 
           <div class="d-flex flex-wrap gap-2 mb-3 align-items-center">
             <input type="email" class="form-control footer-input" placeholder="tu correo electrónico">
-            <button class="btn btn-dark btn-suscripción">Suscribir</button>
+            <button type="submit" class="btn btn-dark btn-suscripción">Suscribir</button>
           </div>
 
           <div class="footer-redes d-flex gap-3 align-items-center mt-3">

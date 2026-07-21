@@ -582,6 +582,23 @@ p, .valores-subtitulo, .valor-card-text {
     object-fit: contain;
 }
 
+/* Diseño Ponte en contacto*/
+
+#backg{
+    background-color: #C66271;
+}
+
+#botn{
+    background-color: #000000;
+    text-decoration-color: #FFFFFF;
+}
+
+#cajacont{
+    border: radius 14px;;
+    box-shadow: -1px 4px 6px 2px rgba(0, 0, 0, 0.2);
+    
+}
+
 @media (max-width: 767.98px) {
     .footer-logo-header {
         margin-left: auto;

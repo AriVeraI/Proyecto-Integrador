@@ -1,7 +1,7 @@
 const mainForm = () => {
     //variables para la manipulacion del DOM para la captura de datos del formulario
     const nameInput = document.querySelector('#contactName').value;
-    const emailInput = document.querySelector('#contactName').value;
+    const emailInput = document.querySelector('#contactEmail ').value;
     const numberInput = document.querySelector('#contactNumber').value;
     const message = document.querySelector('#contactMessage').value;
     //comprobacion de entrada de datos correcta con una llamada a la funcion encargada de esta tarea

@@ -26,6 +26,21 @@ const veriForm = (nameInput, emailInput, numberInput, message) => {
         alert('¡Gracias por contactarnos!\nEquipo Yeya\'s Little Shop');
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const phoneInput = document.getElementById('contactNumber');
+
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      // Remueve cualquier carácter que NO sea un número del 0 al 9
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
+
+      // Recorta a 10 dígitos como máximo por si intenta pegar un texto largo
+      if (e.target.value.length > 10) {
+        e.target.value = e.target.value.slice(0, 10);
+      }
+    });
+  }
+});
 //const enviarCorreo = (nameInput, emailInput, numberInput, message) => {
 // Todavía no nos enseñan
 //}

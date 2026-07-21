@@ -41,18 +41,17 @@
     </div>
   </header>
   <main>
-    <h1 class="text-center p-5 about-subtitulo">
-      Ponte en contacto
-    </h1>
-    <p class="text-center p-8 About-parrafo2">
-  Nos encantaría saber de ti. Ya se a que tengas una pregunta sobre nuestras piezas,<br>
-  tamaños o estilos, nuestro equipo está listo para responder todas tus dudas.
-</p>
-<div>
-  <p>
-
+    <section class="text-center my-4">
+  <h1 class="about-subtitulo fw-bold mb-2">
+    Ponte en contacto
+  </h1>
+  
+  <p class="text-center About-parrafo2 text-muted">
+    Nos encantaría saber de ti. Ya sea que tengas una pregunta sobre nuestras piezas,<br>
+    tamaños o estilos, nuestro equipo está listo para responder todas tus dudas.
   </p>
-</div>
+</section>
+
     <div id="cajacont" class="container card mb-3 p-0">
       <div class="row g-0">
         <div id="backg" class="col-md-4 text-white">
@@ -104,14 +103,28 @@
                 <input type="email" class="form-control contact-input" name="correo" id="contactEmail" placeholder="hola@ejemplo.com">
               </div>
               <div class="mb-3">
-                <label for="contactSubject" class="form-label contact-label About-parrafo2">Teléfono</label>
-                <input type="text" class="form-control contact-input" name="telefono" id="contactNumber" placeholder="¿En qué podemos ayudarte?">
-              </div>
+  <div class="mb-3">
+  <label for="contactNumber" class="form-label contact-label About-parrafo2">Teléfono</label>
+  <input 
+    type="text" 
+    class="form-control contact-input" 
+    name="telefono" 
+    id="contactNumber" 
+    placeholder="10 dígitos (ej. 5512345678)" 
+    maxlength="10"
+    minlength="10"
+    inputmode="numeric"
+    pattern="[0-9]{10}"
+    title="Debes ingresar un número telefónico de 10 dígitos."
+    required
+  >
+</div>
               <div class="mb-4">
                 <label for="contactMessage" class="form-label contact-label About-parrafo2">Mensaje</label>
                 <textarea class="form-control contact-input" name="mensaje" id="contactMessage" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
               </div>
-              <button type="submit" class="btn btn-dark text-black"> Enviar mensaje</button>
+              
+               <button type="submit" id="btnSend" class="btn w-100 About-parrafo2">Enviar mensaje</button>
               <!-- <button type="submit" id="btnSend" class="btn text-white w-100 About-parrafo2">Enviar mensaje</button> -->
             </form>
           </div>

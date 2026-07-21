@@ -606,3 +606,22 @@ p, .valores-subtitulo, .valor-card-text {
         max-width: 140px; 
     }
 }
+
+/*Contacto*/
+/* CONTACTO */
+#btnSend {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+#btnSend:hover {
+  background-color: #C66271 !important;
+  color: #FFFFFF !important;
+}
+#cajacont {
+  border-radius: 16px !important; /* Ajusta el nivel de redondeo según prefieras */
+  overflow: hidden !important;   /* <--- ESTA ES LA CLAVE para recortar las esquinas de #backg */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave idéntica a la referencia */
+  border: none !important;
+}

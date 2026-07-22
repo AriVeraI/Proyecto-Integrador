@@ -52,81 +52,86 @@
   </p>
 </section>
 
-    <div id="cajacont" class="container card mb-3 p-0">
-      <div class="row g-0">
-        <div id="backg" class="col-md-4 text-white">
-          <div class="card-body ">
-            <h3 class="card-title mb-5">Información de Contacto</h3>
+<div id="cajacont" class="container card mb-3 p-0 overflow-hidden border-0 shadow">
+<div class="row g-0 align-items-stretch">        
+        
+<div id="backg" class="col-md-4 text-white p-4 p-md-5 d-flex flex-column justify-content-between">
+  
+  <div>
+    <h3 class="card-title mb-5">Información de Contacto</h3>
 
-            <!-- Ítem: Teléfono -->
-            <div class="d-flex align-items-start mb-4">
+    <div class="d-flex align-items-start mb-4">
+      <img src="..\HTML\iconos\white_phone.png" alt="Teléfono" width="24" class="me-3 mt-1">
+      <div>
+        <h5 class="mb-1">Teléfono</h5>
+        <p class="mb-0">+52 (55) 1234-5678<br>Lun-Vie 9am - 6pm</p>
+      </div>
+    </div>
 
-              <img src="..\HTML\iconos\white_phone.png" alt="Teléfono" width="24" class="me-3 mt-1">
-              <div>
-                <h5 class="mb-1 ">Teléfono</h5>
-                <p class="mb-0 principal-link-header">+52 (55) 1234-5678<br>Lun-Vie 9am - 6pm</p>
-              </div>
-            </div>
+    <div class="d-flex align-items-start mb-4">
+      <img src="..\HTML\iconos\whit-email.png" alt="Correo Electrónico" width="24" class="me-3 mt-1">
+      <div>
+        <h5 class="mb-1">Correo Electrónico</h5>
+        <p class="mb-0">hola@latienditadelayeya.com</p>
+      </div>
+    </div>
+  </div>
 
-            <!-- Ítem: Correo Electrónico -->
-            <div class="d-flex align-items-start mb-4">
+  <!-- BLOQUE INFERIOR (Empujado al fondo con mt-auto) -->
+  <div class="mt-auto pt-4">
+    <h5 class="mb-3">Síguenos</h5>
+    <div class="d-flex gap-3">
+      <a href="#"><img src="..\HTML\iconos\insta_icon.png" alt="Instagram" width="32"></a>
+      <a href="#"><img src="..\HTML\iconos\facebook_icon.png" alt="Facebook" width="32"></a>
+      <a href="#"><img src="..\HTML\iconos\insta_icon.png" alt="Twitter" width="32"></a>
+    </div>
+  </div>
 
-              <img src="..\HTML\iconos\whit-email.png" alt="Correo Electrónico" width="24" class="me-3 mt-1">
-              <div>
-                <h5 class="mb-1">Correo Electrónico</h5>
-                <p class="mb-0 principal-link-header">hola@latienditadelayeya.com</p>
-              </div>
-            </div>
-
-            <!-- Sección: Síguenos -->
-            <div class="mt-auto pt-4">
-              <h5 class="mb-3">Síguenos</h5>
-              <div class="d-flex gap-3">
-                <a href="#"><img src="..\HTML\iconos\insta_icon.png" alt="Instagram" width="36"></a>
-                <a href="#"><img src="..\HTML\iconos\facebook_icon.png" alt="Facebook" width="36"></a>
-                <a href="#"><img src="..\HTML\iconos\insta_icon.png" alt="Twitter" width="36"></a>
-              </div>
-            </div>
-
-          </div>
-        </div>
+</div>
         <div class="col-md-8"> <!---- Card información del formulario---->
           <div class="card-body">
             <h3 class="card-title">Envíanos un mensaje</h3>
-            <form id="contact-form" action="https://formspree.io/f/xjgnojvj" method="POST">
-              <div class="mb-3">
-                <label for="contactName" class="form-label contact-label About-parrafo2">Nombre</label>
-                <input type="text" class="form-control contact-input" name="nombre" id="contactName" placeholder="Tu nombre completo">
-              </div>
-              <div class="mb-3">
-                <label for="contactEmail" class="form-label contact-label About-parrafo2">Correo Electrónico</label>
-                <input type="email" class="form-control contact-input" name="correo" id="contactEmail" placeholder="hola@ejemplo.com">
-              </div>
-              <div class="mb-3">
+            <form id="contact-form" action="https://formspree.io/f/xjgnojvj" method="POST" autocomplete="off">
+  
+  <!-- Fila 1: Nombre y Correo en 2 columnas -->
+  <div class="row g-3 mb-3">
+    <div class="col-md-6">
+      <label for="contactName" class="form-label contact-label">Nombre Completo</label>
+      <input type="text" class="form-control contact-input" name="nombre" id="contactName" placeholder="Ana Pérez" required>
+    </div>
+    <div class="col-md-6">
+      <label for="contactEmail" class="form-label contact-label">Correo Electrónico</label>
+      <input type="email" class="form-control contact-input" name="correo" id="contactEmail" placeholder="ana@ejemplo.com" required>
+    </div>
+  </div>
+
+  <!-- Fila 2: Teléfono -->
   <div class="mb-3">
-  <label for="contactNumber" class="form-label contact-label About-parrafo2">Teléfono</label>
-  <input 
-    type="text" 
-    class="form-control contact-input" 
-    name="telefono" 
-    id="contactNumber" 
-    placeholder="10 dígitos (ej. 5512345678)" 
-    maxlength="10"
-    minlength="10"
-    inputmode="numeric"
-    pattern="[0-9]{10}"
-    title="Debes ingresar un número telefónico de 10 dígitos."
-    required
-  >
-</div>
-              <div class="mb-4">
-                <label for="contactMessage" class="form-label contact-label About-parrafo2">Mensaje</label>
-                <textarea class="form-control contact-input" name="mensaje" id="contactMessage" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
-              </div>
-              
-               <button type="submit" id="btnSend" class="btn w-100 About-parrafo2">Enviar mensaje</button>
-              <!-- <button type="submit" id="btnSend" class="btn text-white w-100 About-parrafo2">Enviar mensaje</button> -->
-            </form>
+    <label for="contactNumber" class="form-label contact-label">Teléfono</label>
+    <input 
+      type="text" 
+      class="form-control contact-input" 
+      name="telefono" 
+      id="contactNumber" 
+      placeholder="10 dígitos (ej. 5512345678)" 
+      maxlength="10"
+      minlength="10"
+      inputmode="numeric"
+      oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);"
+      required
+    >
+  </div>
+
+  <!-- Fila 3: Mensaje -->
+  <div class="mb-4">
+    <label for="contactMessage" class="form-label contact-label">Mensaje</label>
+    <textarea class="form-control contact-input" name="mensaje" id="contactMessage" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+  </div>
+  
+  <!-- Botón de ancho completo -->
+  <button type="submit" id="btnSend" class="btn w-100 py-3 fw-bold">Enviar Mensaje</button>
+</form>
+            
           </div>
         </div>
       </div>

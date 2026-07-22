@@ -674,3 +674,73 @@ p, .valores-subtitulo, .valor-card-text {
     border-top-right-radius: 16px !important;
   }
 }
+/* Botón circular unificado para redes sociales */
+.social-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Estilo para el bloque rosa (fondo blanco translúcido) */
+.social-icon-pink {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Estilo para el footer gris (fondo oscuro / gris translúcido) */
+.social-icon-footer {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #333333;
+}
+
+.social-icon-circle:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+/* Íconos para el Footer Gris */
+.social-icon-footer {
+  width: 34px;
+  height: 34px;
+  background-color: #212529; /* Mismo color del botón Suscribir */
+  color: #ffffff;             /* Ícono en color blanco */
+  border-radius: 50%;         /* Forma circular perfecta */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima (Hover) */
+.social-icon-footer:hover {
+  background-color: #b86273; /* Tono rosa de tu marca al hacer hover */
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+/* Estilo específico para los íconos del footer gris */
+.footer-redes .social-icon-footer {
+  width: 32px;
+  height: 32px;
+  background-color: #212529 !important; /* Fondo oscuro (mismo color que el botón Suscribir) */
+  color: #ffffff !important;             /* Ícono en blanco */
+  border-radius: 50%;                     /* Círculo perfecto */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover en el footer */
+.footer-redes .social-icon-footer:hover {
+  background-color: #b86273 !important; /* Cambia a rosa de tu marca al pasar el mouse */
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}

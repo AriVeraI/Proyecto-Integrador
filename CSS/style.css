@@ -526,7 +526,12 @@ p, .valores-subtitulo, .valor-card-text {
     padding-left: 4px; /* Pequeño efecto dinámico al pasar el cursor */
 }
 
-/* FORMULARIO BOLETÍN */
+
+ /* Contacto */
+/* ==========================================
+   FORMULARIO BOLETÍN Y FOOTER
+   ========================================== */
+
 .footer-input {
     font-family: var(--fuente-cuerpo);
     font-size: 0.9rem;
@@ -564,16 +569,17 @@ p, .valores-subtitulo, .valor-card-text {
 }
 
 .footer-redes a img {
-    width: 24px;  /* Tamaño perfecto para el footer */
+    width: 24px;
     height: 24px;
     object-fit: contain;
-    /* Este filtro opcional los vuelve gris oscuro/negro para que combinen con tus títulos */
-    filter: brightness(0) cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    filter: brightness(0); /* Los vuelve completamente negros/gris oscuro */
     transition: transform 0.2s ease, filter 0.2s ease;
 }
+
+/* Logo Footer */
 .footer-logo-header {
     display: block;
-    max-width: 160px; 
+    max-width: 160px;
 }
 
 .logo-superior {
@@ -581,31 +587,94 @@ p, .valores-subtitulo, .valor-card-text {
     height: auto;
     object-fit: contain;
 }
+/* ==========================================
+   SECCIÓN CONTACTO (Corregido)
+   ========================================== */
 
-/* Diseño Ponte en contacto*/
-
-#backg{
-    background-color: #C66271;
+/* Tarjeta contenedora principal */
+#cajacont {
+  border-radius: 16px !important;
+  overflow: hidden !important; /* Corta todo lo que sobresalga */
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-#btnSend{
-    background-color: #000000;
-    text-decoration-color: #FFFFFF;
+/* Alineación de las columnas */
+#cajacont .row {
+  display: flex !important;
+  align-items: stretch !important; /* Mantiene ambas columnas a la misma altura exactamente */
 }
 
-#cajacont{
-    border: radius 14px;;
-    box-shadow: -1px 4px 6px 2px rgba(0, 0, 0, 0.2);
-
+/* Columna lateral rosa */
+#backg {
+  background-color: #C66271 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  
+  /* ESQUINA CLAVE: Fuerza las esquinas redondeadas del lado izquierdo */
+  border-top-left-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
+  
+  /* Forzar que ocupe todo el alto del row sin espacio blanco abajo */
+  height: auto !important; 
+  min-height: 100% !important;
 }
 
+#backg .mt-auto {
+  margin-top: auto !important;
+}
+
+/* Campos del formulario de contacto */
+.contact-label {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #2d3748;
+  margin-bottom: 0.4rem;
+}
+
+.contact-input {
+  background-color: #f2f4f7 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.contact-input:focus {
+  background-color: #e9ecef !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1) !important;
+  outline: none;
+}
+
+/* Botón Enviar Formulario */
+#btnSend {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  font-size: 0.95rem;
+  border: none !important;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#btnSend:hover {
+  background-color: #C66271 !important;
+  color: #ffffff !important;
+}
+
+#btnSend:active {
+  transform: scale(0.99);
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
 @media (max-width: 767.98px) {
-    .footer-logo-header {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 140px; 
-    }
+  #backg {
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 16px !important;
+  }
 }
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 :root {
@@ -1221,3 +1290,75 @@ p, .valores-subtitulo, .valor-card-text {
   max-width: 250px; /* Ajusta este ancho a tu gusto */
 }
 >>>>>>> Stashed changes
+=======
+/* Botón circular unificado para redes sociales */
+.social-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Estilo para el bloque rosa (fondo blanco translúcido) */
+.social-icon-pink {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Estilo para el footer gris (fondo oscuro / gris translúcido) */
+.social-icon-footer {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #333333;
+}
+
+.social-icon-circle:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+/* Íconos para el Footer Gris */
+.social-icon-footer {
+  width: 34px;
+  height: 34px;
+  background-color: #212529; /* Mismo color del botón Suscribir */
+  color: #ffffff;             /* Ícono en color blanco */
+  border-radius: 50%;         /* Forma circular perfecta */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima (Hover) */
+.social-icon-footer:hover {
+  background-color: #b86273; /* Tono rosa de tu marca al hacer hover */
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+/* Estilo específico para los íconos del footer gris */
+.footer-redes .social-icon-footer {
+  width: 32px;
+  height: 32px;
+  background-color: #212529 !important; /* Fondo oscuro (mismo color que el botón Suscribir) */
+  color: #ffffff !important;             /* Ícono en blanco */
+  border-radius: 50%;                     /* Círculo perfecto */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover en el footer */
+.footer-redes .social-icon-footer:hover {
+  background-color: #b86273 !important; /* Cambia a rosa de tu marca al pasar el mouse */
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+>>>>>>> 07cbb1b493fd303a4fa75167324673b1e3cc4c3c

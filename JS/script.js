@@ -1,36 +1,68 @@
-const mainForm = () => {
-    //variables para la manipulacion del DOM para la captura de datos del formulario
-    const nameInput = document.querySelector('#contactName').value;
-    const emailInput = document.querySelector('#contactEmail ').value;
-    const numberInput = document.querySelector('#contactNumber').value;
-    const message = document.querySelector('#contactMessage').value;
-    //comprobacion de entrada de datos correcta con una llamada a la funcion encargada de esta tarea
-    veriForm(nameInput, emailInput, numberInput, message);
-}
-//funcion para la verificacion de ingreso de datos
-const veriForm = (nameInput, emailInput, numberInput, message) => {
-    //expresion regular para la verificacion de email ingresado correctamente 
-    const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    // Expresión regular para número de teléfono (acepta de 7 a 15 dígitos numéricos)
-    const regexTel = /^[0-9]{7,15}$/;
-    //verificacion de que todos los campos son obligatorios
-    if (nameInput.trim() === '' || emailInput.trim() === ''
-        || numberInput.trim() === '' || message.trim() === '') {
-        alert('Los campos son obligatorios');
-    } else if (regexEmail.test(emailInput.trim())) {//verificacion de que el email ingresado sea correcto   
-        alert('Debe ingresar un email valido');
-    } else if (!regexTel.test(numberInput.trim())) {   //Verificación de que el teléfono contenga solo números válidos
-        alert('Por favor, ingrese un número de teléfono válido (solo números, entre 7 y 15 dígitos).');
-    }else {
-        enviarCorreo (nameInput, emailInput, numberInput, message);
-        alert('¡Gracias por contactarnos!\nEquipo Yeya\'s Little Shop');
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contact-form');
+  const phoneInput = document.getElementById('contactNumber');
+  const emailInput = document.getElementById('contactEmail');
+
+  // 1. LIMPIA EL FORMULARIO AL CARGAR POR PRIMERA VEZ
+  if (contactForm) {
+    contactForm.reset();
+  }
+
+  // 2. LIMPIA EL FORMULARIO CUANDO EL USUARIO REGRESA DESDE FORMSPREE
+  // (El evento 'pageshow' se dispara al volver atrás en el navegador)
+  window.addEventListener('pageshow', () => {
+    if (contactForm) {
+      contactForm.reset();
     }
-}
-const enviarCorreo = (nameInput, emailInput, numberInput, message) => {
-// Todavía no nos enseñan
-}
-//Evento para llamar al formulario
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    mainForm();
-})
+  });
+
+  // 3. RESTRICCIÓN EN TIEMPO REAL PARA EL TELÉFONO (Solo números, máximo 10)
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 10);
+      
+      // Quita el mensaje personalizado de error mientras escribe
+      phoneInput.setCustomValidity('');
+    });
+  }
+
+  // 4. LIMPIA LA VALIDACIÓN DEL CORREO MIENTRAS EL USUARIO ESCRIBE
+  if (emailInput) {
+    emailInput.addEventListener('input', () => {
+      emailInput.setCustomValidity('');
+    });
+  }
+
+  // 5. VALIDACIÓN PERSONALIZADA AL ENVIAR
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      const emailValue = emailInput ? emailInput.value.trim() : '';
+      const phoneValue = phoneInput ? phoneInput.value.trim() : '';
+      const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      // Reiniciar mensajes de error
+      if (emailInput) emailInput.setCustomValidity('');
+      if (phoneInput) phoneInput.setCustomValidity('');
+
+      // Validación de Email
+      if (emailInput && !regexEmail.test(emailValue)) {
+        if (!emailValue.includes('@')) {
+          emailInput.setCustomValidity(`Incluye un signo "@" en la dirección de correo electrónico. La dirección "${emailValue}" no incluye el signo "@".`);
+        } else {
+          emailInput.setCustomValidity('Por favor, ingresa un correo electrónico válido.');
+        }
+        emailInput.reportValidity();
+        e.preventDefault();
+        return;
+      }
+
+      // Validación de Teléfono (Exige exactamente 10 dígitos)
+      if (phoneInput && phoneValue.length !== 10) {
+        phoneInput.setCustomValidity('Por favor, ingresa un número de teléfono de exactamente 10 dígitos.');
+        phoneInput.reportValidity();
+        e.preventDefault();
+        return;
+      }
+    });
+  }
+});
